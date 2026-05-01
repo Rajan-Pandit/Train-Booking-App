@@ -1,0 +1,99 @@
+.payment-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.payment-header p {
+  color: #666;
+}
+
+.payment-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.booking-summary {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.booking-summary h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.summary-details p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.payment-form {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.payment-method:hover {
+  background-color: #f8f9fa;
+}
+
+.card-form {
+  margin-top: 1rem;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.upi-payment,
+.netbanking-payment {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: center;
+}

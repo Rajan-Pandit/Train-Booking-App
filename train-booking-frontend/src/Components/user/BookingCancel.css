@@ -1,0 +1,141 @@
+.booking-cancel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cancel-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cancel-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.cancel-header p {
+  color: #666;
+}
+
+.cancel-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-summary {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.booking-summary h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.summary-details p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.cancellation-info {
+  margin-bottom: 2rem;
+}
+
+.cancellation-info h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.policy-details {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.policy-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.policy-item:last-child {
+  border-bottom: none;
+}
+
+.policy-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.policy-item .value {
+  color: #333;
+}
+
+.policy-rules {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.policy-rules h3 {
+  color: #856404;
+  margin-bottom: 0.5rem;
+}
+
+.policy-rules ul {
+  color: #856404;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.policy-rules li {
+  margin-bottom: 0.25rem;
+}
+
+.cancel-actions {
+  text-align: center;
+}
+
+.confirmation-section {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.confirmation-text {
+  color: #721c24;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cancel-error {
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cancel-error h1 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.cancel-error p {
+  color: #666;
+  margin-bottom: 2rem;
+}

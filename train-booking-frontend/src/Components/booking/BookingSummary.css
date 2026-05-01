@@ -1,0 +1,125 @@
+.booking-summary {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.summary-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.summary-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.summary-header p {
+  color: #666;
+}
+
+.summary-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.summary-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summary-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.detail-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.detail-item .value {
+  color: #333;
+}
+
+.passengers-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.passenger-summary {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.passenger-summary h3 {
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.passenger-details p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.fare-breakdown {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.fare-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.fare-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.fare-item .value {
+  color: #333;
+}
+
+.fare-item.total {
+  border-top: 2px solid #007bff;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.fare-item.total .value {
+  color: #007bff;
+}
+
+.summary-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}

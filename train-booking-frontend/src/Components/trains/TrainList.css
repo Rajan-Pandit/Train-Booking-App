@@ -1,0 +1,49 @@
+.train-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.results-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.results-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.results-header h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.results-header p {
+  color: #666;
+}
+
+.trains-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+}
+
+.no-results h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.no-results p {
+  color: #666;
+  margin-bottom: 2rem;
+}

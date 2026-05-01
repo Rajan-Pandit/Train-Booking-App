@@ -1,0 +1,165 @@
+.booking-details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.details-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.details-header h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pnr-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pnr-display {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-completed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.details-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+}
+
+.detail-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.info-item .value {
+  color: #333;
+}
+
+.passengers-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.passenger-card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.passenger-header h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.passenger-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+
+.detail-row .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.detail-row .value {
+  color: #333;
+}
+
+.fare-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.fare-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.fare-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.fare-item .value {
+  color: #333;
+}
+
+.details-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

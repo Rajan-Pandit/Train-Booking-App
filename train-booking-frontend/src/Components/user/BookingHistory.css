@@ -1,0 +1,163 @@
+.booking-history {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.history-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.history-header p {
+  color: #666;
+}
+
+.history-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bookings-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.booking-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.booking-title h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-completed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.pnr-display {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.route-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.station {
+  font-weight: bold;
+  color: #333;
+}
+
+.arrow {
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+.journey-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.info-item .value {
+  color: #333;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 3rem;
+}
+
+.no-bookings h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.no-bookings p {
+  color: #666;
+  margin-bottom: 2rem;
+}
