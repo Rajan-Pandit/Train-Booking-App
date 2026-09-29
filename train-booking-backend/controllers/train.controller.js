@@ -1,5 +1,12 @@
 const Train = require('../models/Train');
 
+const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const createStationMatcher = (station) => {
+  const stationCode = station.match(/\(([^)]+)\)\s*$/)?.[1];
+  return new RegExp(escapeRegExp(stationCode || station), 'i');
+};
+
 // @desc    Search trains
 // @route   GET /api/trains/search
 // @access  Public
@@ -12,19 +19,33 @@ const searchTrains = async (req, res, next) => {
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const dayOfWeek = daysOfWeek[journeyDate.getDay()];
     
-    const escapeRegExp = (string) => {
-      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const sourceMatcher = createStationMatcher(source);
+    const destinationMatcher = createStationMatcher(destination);
+    
+    const trainQuery = {
+      daysOfOperation: dayOfWeek,
+      $and: [
+        { $or: [{ source: sourceMatcher }, { 'route.station': sourceMatcher }] },
+        { $or: [{ destination: destinationMatcher }, { 'route.station': destinationMatcher }] }
+      ]
     };
 
-    const safeSource = source ? escapeRegExp(source) : '';
-    const safeDestination = destination ? escapeRegExp(destination) : '';
-    
-    // Search trains
-    const trains = await Train.find({
-      source: new RegExp(safeSource, 'i'),
-      destination: new RegExp(safeDestination, 'i'),
-      daysOfOperation: dayOfWeek
-    }).select('-route');
+    if (req.query.class) {
+      trainQuery['classes.type'] = req.query.class;
+    }
+
+    const candidates = await Train.find(trainQuery);
+    const trains = candidates.filter((train) => {
+      const route = train.route || [];
+      const sourceIndex = route.findIndex((stop) => sourceMatcher.test(stop.station));
+      const destinationIndex = route.findIndex((stop) => destinationMatcher.test(stop.station));
+
+      if (sourceIndex !== -1 || destinationIndex !== -1) {
+        return sourceIndex !== -1 && destinationIndex > sourceIndex;
+      }
+
+      return sourceMatcher.test(train.source) && destinationMatcher.test(train.destination);
+    });
     
     if (trains.length === 0) {
       return res.json({
@@ -37,7 +58,11 @@ const searchTrains = async (req, res, next) => {
     res.json({
       success: true,
       count: trains.length,
-      data: trains
+      data: trains.map((train) => {
+        const result = train.toObject();
+        delete result.route;
+        return result;
+      })
     });
   } catch (error) {
     next(error);
